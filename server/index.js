@@ -2,6 +2,10 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 require('dotenv').config();
+const massive = require('massive');
+const session = require('express-session');
+userCtrl = require('./constrollers/user');
+
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 

@@ -1,15 +1,18 @@
-import logo from './logo.svg';
+
 import './css/App.css';
 import './css/Nav.css';
 import { HashRouter } from 'react-router-dom';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
+import routes from './routes';
 
 function App() {
   return (
     <HashRouter>
       <div className="App">
         <Nav />
-        Hello
+        <div className="pageBody">
+          { routes }
+        </div>
       </div>
     </HashRouter>
   );

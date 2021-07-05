@@ -1,6 +1,6 @@
 .nav {
     background-color: beige;
-    min-height: 9vh;
+    min-height: 7vh;
     width: 100vw;
     display: flex;
     flex-direction: row;

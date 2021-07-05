@@ -1,15 +1,16 @@
-
+import { HashRouter, Link } from 'react-router-dom';
+import routes from '../routes';
 
 function Nav() {
     return (
         <div className="nav">
             <div className='leftButtons'>
-                <button className='navButton'>Home</button>
-                <button className='navButton'>Site Details</button>
+                <Link to="/" className='navButton'>Home</Link>
+                <Link to="/siteDetails" className='navButton'>Site Details</Link>
             </div>
             <div>Campground Reservations</div>
             <div className='rightButtons'>
-                <button className='navButton'>Login/Register</button>
+                <Link to="/login" className='navButton'>Login/Register</Link>
             </div>
         </div>
     )
