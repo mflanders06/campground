@@ -31,5 +31,12 @@ massive({
     console.log('Database Connected!')
 })
 
+app.post('/api/auth/register', userCtrl.register);
+app.post('/api/auth/login', userCtrl.login);
+app.get('/api/auth/me', userCtrl.getUser);
+app.post('/api/auth/logout', userCtrl.logout);
+
+
+
 
 app.listen(SERVER_PORT, () => console.log(`running on ${SERVER_PORT}`));

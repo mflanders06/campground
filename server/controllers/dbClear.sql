@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS reservations, notices, photos, sites, users;
