@@ -8,7 +8,7 @@ CREATE TABLE users (
 INSERT INTO users
 (email, password, admin)
 VALUES
-('admin@default.com', '$2a$10$whcBZoYI/EJNTkefhxj8Uuv6iygKZtOjcWPrmBJJPdSxsbFC0RLWS', "true");
+('a@b.com', '$2a$10$jNYaCfu58G2k1V1nE39moeCZbEmeg.CGHCxFksyT47XNSOfwShjoi', "true");
 
 CREATE TABLE sites (
     site_key SERIAL PRIMARY KEY,

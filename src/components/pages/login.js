@@ -16,15 +16,36 @@ function Login(){
     function onChangeRegPass2(val)      { setRegPass2( prevPass => val )}
 
     function onClickLogin(){
-        axios.post('/api/auth/login', {loginEmail, loginPassword})
+        let email = loginEmail;
+        let password = loginPassword;
+        axios.post('/api/auth/login', {email, password})
             .then(res => {
-                setLoginEmail( prevEmail => '')
-                setLoginPassword( prevPass => '')
+                setLoginEmail( prevEmail => '');
+                setLoginPassword( prevPass => '');
                 console.log(res)
             })
             .catch( e => {
-                setLoginEmail( prevEmail => '')
-                setLoginPassword( prevPass => '')
+                setLoginEmail( prevEmail => '');
+                setLoginPassword( prevPass => '');
+                console.log(e)
+            })
+    }
+
+    function onClickRegister(){
+        let email = regEmail;
+        let password = regPass;
+        let password2 = regPass2;
+        axios.post('/api/auth/register', { email, password })
+            .then(res => {
+                setRegEmail( prevEmail => '');
+                setRegPass( prevPass => '');
+                setRegPass2( prevPass => '');
+                console.log(res)
+            })
+            .catch (e => {
+                setRegEmail( prevEmail => '');
+                setRegPass( prevPass => '');
+                setRegPass2( prevPass => '');
                 console.log(e)
             })
     }
@@ -41,7 +62,7 @@ function Login(){
                 <input className='register' placeholder='email' onChange={e => onChangeRegEmail(e.target.value)} ></input>
                 <input className='register' placeholder='password' onChange={e => onChangeRegPass(e.target.value)} ></input>
                 <input className='register' placeholder='confirm password' onChange={e => onChangeRegPass2(e.target.value)} ></input>
-                <button>Register</button>
+                <button onClick={e => onClickRegister()}>Register</button>
             </div>
         </>
     )
