@@ -1,3 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
 .App {
   text-align: center;
   position: relative;
@@ -12,3 +19,15 @@
   color: #61dafb;
 }
 
+.pictures {
+  height: 100vh;
+  width: 220px;
+  overflow: scroll;
+}
+
+.picture {
+  padding: 5px;
+  height: 200px;
+  width: 200px;
+
+}
