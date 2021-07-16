@@ -11,7 +11,7 @@ import teepee1 from '../../pictures/teepee1.jpeg';
 function home() {
     return(
         <div className="main">
-            <div className="picture">
+            <div className="pictures">
                 <img className='picture' src={cabin1} alt="Cabin"></img>
                 <img className='picture' src={camper1} alt="Cabin"></img>
                 <img className='picture' src={river1} alt="Cabin"></img>
