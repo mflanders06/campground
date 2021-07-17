@@ -19,7 +19,7 @@ function home() {
                 <img className='picture' src={trees1} alt="Cabin"></img>
             </div>
             <div className="map">
-
+                <img className='teepee1' src={teepee1} alt="teepee icon"></img>
             </div>
             <div className="notice"></div>
 
