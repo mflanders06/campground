@@ -9,6 +9,8 @@ import trees1 from '../../pictures/trees1.webp';
 import teepee1 from '../../pictures/teepee1.jpeg';
 import mapBackground from '../../pictures/mapBackground.png';
 import rvIcon from '../../pictures/rvIcon.jpeg';
+import houseIcon from '../../pictures/houseIcon.jpeg';
+import cabinIcon from '../../pictures/cabinIcon.png';
 
 function home() {
     return(
@@ -27,7 +29,8 @@ function home() {
                 <img className='rv rvIcon1' src={rvIcon} alt="rv icon"></img>
                 <img className='rv rvIcon2' src={rvIcon} alt="rv icon"></img>
                 <img className='rv rvIcon3' src={rvIcon} alt="rv icon"></img>
-
+                <img className='houseIcon' src={houseIcon} alt="house icon"></img>
+                <img className='cabinIcon' src={cabinIcon} alt="cabin icon"></img>
             </div>
             <div className="notice"></div>
 

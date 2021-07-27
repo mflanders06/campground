@@ -48,3 +48,19 @@
     left: 500px;
     top: 160px;
 }
+
+.houseIcon {
+    position: absolute;
+    height: 70px;
+    width: 160px;
+    left: 170px;
+    top: 15px;
+}
+
+.cabinIcon {
+    position: absolute;
+    height: 70px;
+    width: 160px;
+    left: 380px;
+    top: 15px;
+}
