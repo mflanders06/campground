@@ -7,6 +7,7 @@ import river2 from '../../pictures/river2.jpeg';
 import trees1 from '../../pictures/trees1.webp';
 //map pictures
 import teepee1 from '../../pictures/teepee1.jpeg';
+import mapBackground from '../../pictures/mapBackground.png';
 
 function home() {
     return(
@@ -19,7 +20,9 @@ function home() {
                 <img className='picture' src={trees1} alt="Cabin"></img>
             </div>
             <div className="map">
-                <img className='teepee1' src={teepee1} alt="teepee icon"></img>
+                <img className='mapBackground' src={mapBackground} alt="map"></img>
+                <img className='teepee1 teepee' src={teepee1} alt="teepee icon"></img>
+                <img className='teepee2 teepee' src={teepee1} alt="teepee icon"></img>
             </div>
             <div className="notice"></div>
 
