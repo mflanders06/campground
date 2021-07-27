@@ -12,7 +12,7 @@
     object-fit: fill;
 }
 
-.teepee{
+.teepee {
     position: absolute;
     height: 50px;
     width: 50px;
@@ -26,4 +26,25 @@
 .teepee2 {
     left: 490px;
     top: 350px;
+}
+
+.rv {
+    position: absolute;
+    height: 70px;
+    width: 80px;
+}
+
+.rvIcon1 {
+    left: 490px;
+    top: 280px;
+}
+
+.rvIcon2 {
+    left: 495px;
+    top: 220px;
+}
+
+.rvIcon3 {
+    left: 500px;
+    top: 160px;
 }

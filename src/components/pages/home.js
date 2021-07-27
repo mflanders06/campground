@@ -8,6 +8,7 @@ import trees1 from '../../pictures/trees1.webp';
 //map pictures
 import teepee1 from '../../pictures/teepee1.jpeg';
 import mapBackground from '../../pictures/mapBackground.png';
+import rvIcon from '../../pictures/rvIcon.jpeg';
 
 function home() {
     return(
@@ -23,6 +24,10 @@ function home() {
                 <img className='mapBackground' src={mapBackground} alt="map"></img>
                 <img className='teepee1 teepee' src={teepee1} alt="teepee icon"></img>
                 <img className='teepee2 teepee' src={teepee1} alt="teepee icon"></img>
+                <img className='rv rvIcon1' src={rvIcon} alt="rv icon"></img>
+                <img className='rv rvIcon2' src={rvIcon} alt="rv icon"></img>
+                <img className='rv rvIcon3' src={rvIcon} alt="rv icon"></img>
+
             </div>
             <div className="notice"></div>
 
