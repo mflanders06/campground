@@ -1,4 +1,6 @@
 import React from 'react';
+import Notices from '../Notices';
+
 //general pictures
 import cabin1 from '../../pictures/cabin1.jpeg';
 import camper1 from '../../pictures/camper1.png';
@@ -32,7 +34,7 @@ function home() {
                 <img className='houseIcon' src={houseIcon} alt="house icon"></img>
                 <img className='cabinIcon' src={cabinIcon} alt="cabin icon"></img>
             </div>
-            <div className="notice"></div>
+            <Notices />
 
         </div>
     )

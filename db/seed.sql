@@ -41,3 +41,15 @@ CREATE TABLE notices (
     endDate DATE,
     notice VARCHAR(255)
 );
+
+INSERT INTO notices (startdate, enddate, notice)
+VALUES
+(CURRENT_DATE, '2021-07-29', 'This one is expired'),
+(CURRENT_DATE, '2039-07-29', '10:00 PM quiet. No generators. No outside lights.'),
+(CURRENT_DATE, '2039-07-29', 'Kayaks are available for rent. $25/hr'),
+(CURRENT_DATE, '2021-08-31', 'Fishing: Mosquito flies are performing well this month.'),
+(CURRENT_DATE, '2039-07-29', 'Wood for campfire can be purchased for $5 a bundle.'),
+(CURRENT_DATE, '2021-07-29', 'Another notice'),
+(CURRENT_DATE, '2021-07-29', 'And another'),
+(CURRENT_DATE, '2021-07-29', 'One more'),
+(CURRENT_DATE, '2021-08-29', 'This has not started yet');
