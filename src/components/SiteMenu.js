@@ -5,7 +5,7 @@ import routes from '../routes';
 function SiteMenu(){
 
     const [showMenu, setShowMenu] = useState(false);
-    console.log('Here is my console:', showMenu);
+
     return (
         <>
             <button>Site Details</button>
