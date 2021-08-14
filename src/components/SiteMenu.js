@@ -6,9 +6,12 @@ function SiteMenu(){
 
     const [showMenu, setShowMenu] = useState(false);
 
+    function handleMenu(){
+        setShowMenu(!showMenu);
+    }
     return (
         <>
-            <button>Site Details</button>
+            <button onClick={handleMenu}>Site Details</button>
             {
                 showMenu ? (
                     <div className="siteMenu">

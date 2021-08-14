@@ -8,26 +8,39 @@ function Notices (){
     const [noticeList, setNoticeList] = useState();
     //console.log('my console:', noticeList.data);
 
-    let getNotices = () => {
-        axios
+    let getNotices = async() => {
+        await axios
             .get('/api/notice')
             .then(notices => {
-                setNoticeList(notices);
-                //console.log('Another console', noticeList.data);
+                setNoticeList(notices.data);
+                //console.log('Another console', notices);
             })
             .catch((error) => {
-                alert(error.response.request.response);
+                console.log(error);
             })
     }
 
     useEffect(() => {
         getNotices();
-    }, [noticeList]);
+
+    },[]);
+
+    function displayList (noticeList){
+        return(
+            <div>
+                {noticeList.map((value, index) => (
+                    <div key={index}>{value.notice}</div>
+                ))}
+            </div>
+        )
+
+    }
+
 
     if(noticeList){
         return(
             <div className="notice">
-                    Hello!
+                    {displayList(noticeList)}
             </div>
         );
     } else { 
