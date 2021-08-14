@@ -27,9 +27,9 @@ function Notices (){
 
     function displayList (noticeList){
         return(
-            <div>
+            <div className="noticeList">
                 {noticeList.map((value, index) => (
-                    <div key={index}>{value.notice}</div>
+                    <div className="notice" key={index}>{value.notice}</div>
                 ))}
             </div>
         )
@@ -39,7 +39,7 @@ function Notices (){
 
     if(noticeList){
         return(
-            <div className="notice">
+            <div>
                     {displayList(noticeList)}
             </div>
         );

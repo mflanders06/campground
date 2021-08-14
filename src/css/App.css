@@ -12,7 +12,7 @@
 }
 
 .pageBody {
-  padding-top:7vh;
+  padding-top:10vh;
 }
 
 .App-link {
@@ -20,9 +20,10 @@
 }
 
 .pictures {
-  height: 92vh;
+  height: 90vh;
   width: 230px;
   overflow: scroll;
+  margin-left: 20px;
 }
 
 .picture {
@@ -32,6 +33,15 @@
 
 }
 
+.noticeList {
+  height: 92vh;
+  width: 230px;
+  overflow: scroll;
+  margin-right: 20px;
+}
+
 .notice {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
+
