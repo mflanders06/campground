@@ -4,6 +4,18 @@ import routes from '../routes';
 
 function SiteMenu(){
 
+    const mapStatetoProps = state => {
+        return{
+            selectedSite: state.selectedSite
+        }
+    }
+
+    const mapDispatchtoProps = dispatch => {
+        return {
+            SiteButton: () => dispatch({ type: "Site change" })
+        }
+    }
+
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenu(){
