@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../routes';
+import * as actions from '../Store/Actions';
 
 function SiteMenu(){
-
+    /*
     const mapStatetoProps = state => {
         return{
             selectedSite: state.selectedSite
@@ -15,7 +16,7 @@ function SiteMenu(){
             SiteButton: () => dispatch({ type: "Site change" })
         }
     }
-
+    */
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenu(){
