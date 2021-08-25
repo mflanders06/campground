@@ -17,6 +17,17 @@ function SiteMenu(){
         }
     }
     */
+
+    function buttonClick(site){
+        if      (site === 'main')  { actions.siteChangeMain() }
+        else if (site === 'house') { actions.siteChangeHouse() }
+        else if (site === 'teepee'){ actions.siteChangeTeepee() }
+        else if (site === 'rv')    { actions.siteChangeRV() }
+        else if (site === 'cabin') { actions.siteChangeCabin() }
+        
+        //console.log(store.getState)
+    }
+
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenu(){
