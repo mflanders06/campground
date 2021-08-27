@@ -22,4 +22,5 @@
     flex-direction:column;
     position: absolute;
     margin-left: 52px;
+    z-index: 5;
   }

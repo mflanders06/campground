@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../routes';
 import * as actions from '../Store/Actions';
+import store from '../Store/Store'
 
 function SiteMenu(){
     /*
@@ -25,7 +26,7 @@ function SiteMenu(){
         else if (site === 'rv')    { actions.siteChangeRV() }
         else if (site === 'cabin') { actions.siteChangeCabin() }
         
-        //console.log(store.getState)
+        console.log(store.getState)
     }
 
     const [showMenu, setShowMenu] = useState(false);
@@ -39,9 +40,9 @@ function SiteMenu(){
             {
                 showMenu ? (
                     <div className="siteMenu">
-                    <Link to="/" ><button>House</button></Link>
-                    <button>Cabin</button>
-                    <button>Teepee #1</button>
+                    <Link to="/" ><button onClick={buttonClick('main')}>    House    </button></Link>
+                    <button onClick={() => buttonClick('cabin')}>Cabin</button>
+                    <button onClick={() => alert('Hello?')}>Teepee #1</button>
                     <button>Teepee #2</button>
                     <button>RV Site #1</button>
                     <button>RV Site #2</button>
