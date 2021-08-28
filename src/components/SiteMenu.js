@@ -2,58 +2,65 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../routes';
 import * as actions from '../Store/Actions';
-import store from '../Store/Store'
+import store from '../Store/Store';
+import {connect} from 'react-redux';
 
-function SiteMenu(){
+function SiteMenu(props){
+
     /*
-    const mapStatetoProps = state => {
-        return{
-            selectedSite: state.selectedSite
-        }
-    }
-
-    const mapDispatchtoProps = dispatch => {
-        return {
-            SiteButton: () => dispatch({ type: "Site change" })
-        }
-    }
-    */
-
     function buttonClick(site){
-        if      (site === 'main')  { actions.siteChangeMain() }
-        else if (site === 'house') { actions.siteChangeHouse() }
-        else if (site === 'teepee'){ actions.siteChangeTeepee() }
-        else if (site === 'rv')    { actions.siteChangeRV() }
-        else if (site === 'cabin') { actions.siteChangeCabin() }
+        if      (site === 'main')  { props.siteChangeMain() }
+        else if (site === 'house') { props.siteChangeHouse() }
+        else if (site === 'teepee'){ props.siteChangeTeepee() }
+        else if (site === 'rv')    { props.siteChangeRV() }
+        else if (site === 'cabin') { props.siteChangeCabin() }
         
         console.log(store.getState())
     }
+    */
+
+    function buttonClickMain(){
+        props.siteChangeMain() 
+       return 
+   }
 
     function buttonClickHouse(){
-        { actions.siteChangeHouse() }
+         props.siteChangeHouse() 
         return 
     }
 
+    function buttonClickTeepee(){
+        props.siteChangeTeepee() 
+       return 
+   }
+
+   function buttonClickRV(){
+        props.siteChangeRV() 
+        return 
+    }
+
+    function buttonClickCabin(){
+        props.siteChangeCabin() 
+        return 
+    }
 
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenu(){
         setShowMenu(!showMenu);
     }
-    console.log(store.getState())
     return (
+
         <>
+                {console.log(store.getState())}
             <button onClick={handleMenu}>Site Details</button>
             {
                 showMenu ? (
                     <div className="siteMenu">
-                    <Link to="/" ><button onClick={buttonClickHouse}>    House    </button></Link>
-                    <button onClick={() => buttonClick('cabin')}>Cabin</button>
-                    <button onClick={() => alert('Hello?')}>Teepee #1</button>
-                    <button>Teepee #2</button>
-                    <button>RV Site #1</button>
-                    <button>RV Site #2</button>
-                    <button>RV Site #3</button>
+                    <Link to="/siteDetails" ><button onClick={buttonClickHouse}  >House</button> </Link>
+                    <Link to="/siteDetails" ><button onClick={buttonClickCabin}  >Cabin</button> </Link>
+                    <Link to="/siteDetails" ><button onClick={buttonClickTeepee} >Teepee</button></Link>
+                    <Link to="/siteDetails" ><button onClick={buttonClickRV}     >RV</button>    </Link>
                 </div>
                 )
                 : ( null )
@@ -62,5 +69,11 @@ function SiteMenu(){
         </>
     );
 }
-
-export default SiteMenu;
+let mapDispatchtoProps = {
+    siteChangeHouse:  actions.siteChangeHouse,
+    siteChangeCabin:  actions.siteChangeCabin,
+    siteChangeMain:   actions.siteChangeMain,
+    siteChangeRV:     actions.siteChangeRV,
+    siteChangeTeepee: actions.siteChangeTeepee
+}
+export default connect(undefined, mapDispatchtoProps) (SiteMenu);

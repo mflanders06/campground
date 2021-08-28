@@ -7,7 +7,7 @@ import login from './components/pages/login';
 const routes =(
     <div>
         <Route exact path="/" component={home} />
-        <Route path="/siteDetails/:site" component={siteDetails} />
+        <Route path="/siteDetails" component={siteDetails} />
         <Route path="/login" component={login} />
     </div>
 )
