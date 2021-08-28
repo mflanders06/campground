@@ -26,21 +26,28 @@ function SiteMenu(){
         else if (site === 'rv')    { actions.siteChangeRV() }
         else if (site === 'cabin') { actions.siteChangeCabin() }
         
-        console.log(store.getState)
+        console.log(store.getState())
     }
+
+    function buttonClickHouse(){
+        { actions.siteChangeHouse() }
+        return 
+    }
+
 
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenu(){
         setShowMenu(!showMenu);
     }
+    console.log(store.getState())
     return (
         <>
             <button onClick={handleMenu}>Site Details</button>
             {
                 showMenu ? (
                     <div className="siteMenu">
-                    <Link to="/" ><button onClick={buttonClick('main')}>    House    </button></Link>
+                    <Link to="/" ><button onClick={buttonClickHouse}>    House    </button></Link>
                     <button onClick={() => buttonClick('cabin')}>Cabin</button>
                     <button onClick={() => alert('Hello?')}>Teepee #1</button>
                     <button>Teepee #2</button>
