@@ -4,7 +4,10 @@ const session = require('express-session');
 require('dotenv').config();
 const express = require('express'),
     userCtrl = require('./controllers/user'),
-    notice = require('./controllers/notice');
+    notice = require('./controllers/notice'),
+    image = require('./controllers/image');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/'})
 
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
@@ -36,6 +39,7 @@ app.post('/api/auth/login', userCtrl.login);
 //app.get('/api/auth/me', userCtrl.getUser);
 //app.post('/api/auth/logout', userCtrl.logout);
 app.get('/api/notice', notice.notice);
+app.post('/api/images', image.upload);
 
 
 
