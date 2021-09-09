@@ -12,6 +12,8 @@ const upload = multer({ dest: 'uploads/'})
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
+
+
 const app = express();
 app.use(express.json());
 app.use(session({
@@ -39,7 +41,7 @@ app.post('/api/auth/login', userCtrl.login);
 //app.get('/api/auth/me', userCtrl.getUser);
 //app.post('/api/auth/logout', userCtrl.logout);
 app.get('/api/notice', notice.notice);
-app.post('/api/images', image.upload);
+app.post('/api/images', upload.single('image'), image.upload);
 
 
 
