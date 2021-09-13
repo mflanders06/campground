@@ -11,6 +11,7 @@ function Nav() {
             </div>
             <div>Campground Reservations</div>
             <div className='rightButtons'>
+                <Link to="/Admin" className='navButton'><button>admin</button></Link>
                 <Link to="/login" className='navButton'><button>Login/Register</button></Link>
             </div>
         </div>
