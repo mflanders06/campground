@@ -9,6 +9,7 @@ const express = require('express'),
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/'})
 
+const { uploadFile } = require('./s3')
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
