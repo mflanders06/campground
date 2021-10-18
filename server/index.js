@@ -5,13 +5,14 @@ require('dotenv').config();
 const express = require('express'),
     userCtrl = require('./controllers/user'),
     notice = require('./controllers/notice'),
-    image = require('./controllers/image');
+    image = require('./controllers/image'),
+    site = require('./controllers/site')
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/'})
 
-const { uploadFile } = require('./s3')
+const { uploadFile, getFileStream } = require('./s3')
 
-const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
+const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
 
 
@@ -43,8 +44,9 @@ app.post('/api/auth/login', userCtrl.login);
 //app.post('/api/auth/logout', userCtrl.logout);
 app.get('/api/notice', notice.notice);
 app.post('/api/images', upload.single('image'), image.upload);
-
-
+app.get('/images/:key', image.download);
+app.get('/api/sites', site.sites);
+app.get('/api/image_list', image.image_list);
 
 
 app.listen(SERVER_PORT, () => console.log(`running on ${SERVER_PORT}`));

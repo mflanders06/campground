@@ -45,7 +45,7 @@ function Admin() {
         </div>
       ))}
 
-      <img src="/images/9fa06d3c5da7aec7f932beb5b3e60f1d"></img>
+      <img src="/uploads/98b80038e54cce20b308d8ecf71cec2c"></img>
 
     </div>
   );

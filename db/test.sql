@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS users, characters, avatars, charStats, equipment, charactersEquipment, monsters;
+
+
+
 CREATE TABLE users (
     user_key SERIAL PRIMARY KEY,
     username varchar(50),
@@ -46,11 +50,15 @@ CREATE TABLE charactersEquipment (
     charactersEquipment_key SERIAL PRIMARY KEY,
     character_key INT REFERENCES characters(character_key),
     equipment_key INT REFERENCES equipment(equipment_key),
-    equipped BOOLEAN
+    equipped BOOLEAN,
+    quantity INT
 );
 
-CREATE TABLE monster (
+CREATE TABLE monsters (
     monster_key SERIAL PRIMARY KEY,
     monster_name varchar(100),
-    
+    base_strength INT,
+    base_constitution INT,
+    base_intelligence INT,
+    base_dexterity INT
 )
