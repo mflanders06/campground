@@ -35,7 +35,7 @@ function home() {
                 <img className='cabinIcon' src={cabinIcon} alt="cabin icon"></img>
             </div>
             <Notices />
-            <img src = "/images/98b80038e54cce20b308d8ecf71cec2c"></img>
+            <img src = "/images/e55345b00b7cb25478033d32e4931142"></img>
         </div>
     )
 }

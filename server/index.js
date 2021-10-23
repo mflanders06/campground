@@ -47,6 +47,7 @@ app.post('/api/images', upload.single('image'), image.upload);
 app.get('/images/:key', image.download);
 app.get('/api/sites', site.sites);
 app.get('/api/image_list', image.image_list);
+app.delete('/api/image_del', image.delete);
 
 
 app.listen(SERVER_PORT, () => console.log(`running on ${SERVER_PORT}`));

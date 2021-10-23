@@ -8,11 +8,10 @@
 .App {
   text-align: center;
   position: relative;
-
 }
 
 .pageBody {
-  padding-top:10vh;
+  padding-top: 10vh;
 }
 
 .App-link {
@@ -30,7 +29,6 @@
   padding: 5px;
   height: 200px;
   width: 200px;
-
 }
 
 .noticeList {
@@ -45,3 +43,8 @@
   padding-bottom: 10px;
 }
 
+.adminImage {
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+}
