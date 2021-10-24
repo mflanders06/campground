@@ -24,7 +24,7 @@ function ImageList(){
 
     let delImage = async(key) => {
         await axios
-            .delete('/api/image_del', { key })
+            .post('/api/image_del', { key })
             .then(console.log('Deleted: ', { key }))
             .catch((err) => {
                 console.log(err);
