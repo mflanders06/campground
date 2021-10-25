@@ -1,0 +1,165 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+}
+
+.pageBody {
+  padding-top: 10vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.pictures {
+  height: 90vh;
+  width: 230px;
+  overflow: scroll;
+  margin-left: 20px;
+}
+
+.picture {
+  padding: 5px;
+  height: 200px;
+  width: 200px;
+}
+
+.noticeList {
+  height: 92vh;
+  width: 230px;
+  overflow: scroll;
+  margin-right: 20px;
+}
+
+.notice {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.adminImage {
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.map {
+  height: 800px;
+  width: 800px;
+  position: relative;
+}
+
+.mapBackground {
+  z-index: -1;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.teepee {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+.teepee1 {
+  left: 480px;
+  top: 400px;
+}
+
+.teepee2 {
+  left: 490px;
+  top: 350px;
+}
+
+.rv {
+  position: absolute;
+  height: 70px;
+  width: 80px;
+}
+
+.rvIcon1 {
+  left: 490px;
+  top: 280px;
+}
+
+.rvIcon2 {
+  left: 495px;
+  top: 220px;
+}
+
+.rvIcon3 {
+  left: 500px;
+  top: 160px;
+}
+
+.houseIcon {
+  position: absolute;
+  height: 70px;
+  width: 160px;
+  left: 170px;
+  top: 15px;
+}
+
+.cabinIcon {
+  position: absolute;
+  height: 70px;
+  width: 160px;
+  left: 380px;
+  top: 15px;
+}
+
+.nav {
+  background-color: beige;
+  height: 7vh;
+  width: 94vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: black;
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-right: 65px;
+}
+
+.siteMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  margin-left: 52px;
+  z-index: 5;
+}
+/*# sourceMappingURL=styles.css.map */
