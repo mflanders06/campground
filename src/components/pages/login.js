@@ -1,32 +1,53 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useHistory, Redirect } from 'react-router-dom';
+import * as actions from '../../Store/Actions';
+import store from '../../Store/Store';
+import { connect } from 'react-redux';
 
-function Login(){
 
+function Login(props){
     const [loginEmail,    setLoginEmail   ] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
     const [regEmail,      setRegEmail     ] = useState('');
     const [regPass,       setRegPass      ] = useState('');
     //const [regPass2,      setRegPass2     ] = useState('');
 
+    const history = useHistory();
+    const routeChangeHome = () => {
+        let path = `/`
+        history.push(path)
+    }
+
     function onChangeLoginEmail(val)    { setLoginEmail( prevEmail => val) }
     function onChangeLoginPassword(val) { setLoginPassword( prevPass => val) }
     function onChangeRegEmail(val)      { setRegEmail( prevEmail => val) }
     function onChangeRegPass(val)       { setRegPass( prevPass => val ) }
+    function setAuthTrue()              { props.authTrue(); return }
+    function setAdminTrue()             { props.adminTrue(); return }
     //function onChangeRegPass2(val)      { setRegPass2( prevPass => val )}
 
-    function onClickLogin(){
+    async function onClickLogin(){
         let email = loginEmail;
         let password = loginPassword;
-        axios.post('/api/auth/login', {email, password})
+        await axios.post('/api/auth/login', {email, password})
             .then(res => {
+                console.log(res)
                 setLoginEmail( prevEmail => '');
                 setLoginPassword( prevPass => '');
                 console.log(res)
+                if(!(res.data === undefined)){
+                    if(!(res.data.user_key === undefined)){
+                        //console.log(props)
+                        setAuthTrue()
+                        if (res.data.admin === true){
+                            setAdminTrue()
+                        }
+                    }
+                }
+
             })
             .catch( e => {
-                setLoginEmail( prevEmail => '');
-                setLoginPassword( prevPass => '');
                 console.log(e)
             })
     }
@@ -41,11 +62,13 @@ function Login(){
                 setRegPass( prevPass => '');
                 //setRegPass2( prevPass => '');
                 console.log(res)
+                if(!(res.data === undefined)) {
+                    if(!(res.data.user_key = undefined)){
+
+                    }
+                }
             })
             .catch (e => {
-                setRegEmail( prevEmail => '');
-                setRegPass( prevPass => '');
-                //setRegPass2( prevPass => '');
                 console.log(e)
             })
     }
@@ -68,6 +91,17 @@ function Login(){
     )
 }
 
-export default Login;
+let mapDispatchtoProps = {
+    authTrue:       actions.authTrue,
+    authFalse:      actions.authFalse,
+    adminTrue:      actions.adminTrue,
+    adminFalse:     actions.adminFalse
+}
+
+function mapStatetoProps(state) {
+    return state
+}
+
+export default connect(mapStatetoProps, mapDispatchtoProps) (Login);
 
 //<input className='register' placeholder='confirm password' onChange={e => onChangeRegPass2(e.target.value)} ></input>

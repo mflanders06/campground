@@ -1,7 +1,9 @@
 import * as actions from './ActionTypes';
 
 const InitialState = {
-    selectedSite: 'main'
+    selectedSite: 'main',
+    auth: 'false',
+    admin: 'false'
 }
 
  const Reducer = (state = InitialState, action) => {
@@ -25,6 +27,22 @@ const InitialState = {
 
         case actions.SITE_CHANGE_RV: {
             return {...state, selectedSite: 'rv'}
+        }
+
+        case actions.AUTH_TRUE: {
+            return {...state, auth: 'true'}
+        }
+
+        case actions.AUTH_FALSE: {
+            return {...state, auth: 'false'}
+        }
+
+        case actions.ADMIN_TRUE: {
+            return {...state, admin: 'true'}
+        }
+
+        case actions.ADMIN_FALSE: {
+            return {...state, admin: 'false'}
         }
 
         default: return state;

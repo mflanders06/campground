@@ -41,7 +41,9 @@ massive({
 app.post('/api/auth/register', userCtrl.register);
 app.post('/api/auth/login', userCtrl.login);
 //app.get('/api/auth/me', userCtrl.getUser);
-//app.post('/api/auth/logout', userCtrl.logout);
+app.post('/api/auth/logout', userCtrl.logout);
+app.get('/api/auth/isLoggedIn', userCtrl.isLoggedIn);
+app.get('/api/auth/isAdmin', userCtrl.isAdmin);
 app.get('/api/notice', notice.notice);
 app.post('/api/images', upload.single('image'), image.upload);
 app.get('/images/:key', image.download);

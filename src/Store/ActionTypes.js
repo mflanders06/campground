@@ -3,3 +3,7 @@ export const SITE_CHANGE_HOUSE = 'Site change house';
 export const SITE_CHANGE_TEEPEE = 'Site change teepee';
 export const SITE_CHANGE_RV = 'Site change RV';
 export const SITE_CHANGE_CABIN = 'Site change cabin';
+export const AUTH_TRUE = 'Auth true';
+export const AUTH_FALSE = 'Auth false';
+export const ADMIN_TRUE = 'Admin true';
+export const ADMIN_FALSE = 'Admin false';

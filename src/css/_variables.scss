@@ -1,0 +1,11 @@
+$menu-color: "beige";
+
+$side-pic-height: "200px";
+$side-pic-width: "200px";
+$side-pic-padding: "5px";
+
+@mixin picsize() {
+  padding: $side-pic-padding;
+  height: $side-pic-height;
+  width: $side-pic-width;
+}

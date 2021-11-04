@@ -1,5 +1,7 @@
+@import "variables";
+
 .nav {
-  background-color: beige;
+  background-color: $menu-color;
   height: 7vh;
   width: 94vw;
   display: flex;

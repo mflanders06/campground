@@ -7,8 +7,6 @@ module.exports = {
 
     insert_img: async (req, res, next) => {
         const file = req.file;
-        console.log('This is file #1', file)
-        console.log('This is first request:', req)
         const { photo, description, site_key, main } = req.body;
         const imgdesc = description;
         const db = req.app.get('db');
@@ -48,6 +46,7 @@ module.exports = {
         const readStream = getFileStream(key)
 
         readStream.pipe(res)
+
     },
 
     delete: async (req, res, next) => {

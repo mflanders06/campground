@@ -1,8 +1,15 @@
+@import "./variables";
+
 .main {
   display: flex;
   flex-direction: row;
 
   justify-content: space-between;
+}
+@media only screen and (max-width: 780px) {
+  main {
+    flex-direction: column;
+  }
 }
 
 .App {
@@ -25,10 +32,14 @@
   margin-left: 20px;
 }
 
+@media only screen and (max-width: 780px) {
+  .pictures {
+    display: none;
+  }
+}
+
 .picture {
-  padding: 5px;
-  height: 200px;
-  width: 200px;
+  @include picsize();
 }
 
 .noticeList {
@@ -44,7 +55,7 @@
 }
 
 .adminImage {
-  padding: 5px;
-  height: 40px;
-  width: 40px;
+  padding: $side-pic-padding;
+  height: $side-pic-height;
+  width: $side-pic-width;
 }

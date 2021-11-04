@@ -29,3 +29,27 @@ export function siteChangeCabin(){
         type: actions.SITE_CHANGE_CABIN
     }
 }
+
+export function authTrue(){
+    return {
+        type: actions.AUTH_TRUE
+    }
+}
+
+export function authFalse(){
+    return {
+        type: actions.AUTH_FALSE
+    }
+}
+
+export function adminTrue(){
+    return {
+        type: actions.ADMIN_TRUE
+    }
+}
+
+export function adminFalse(){
+    return {
+        type: actions.ADMIN_FALSE
+    }
+}
